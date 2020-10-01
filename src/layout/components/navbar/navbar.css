@@ -1,0 +1,76 @@
+.navbar{
+    height: 80px;
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgba(0,255,255,0.35);
+    
+}
+
+.navbar .logo{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo p{
+    font-size: 24px;
+    font-weight: bold;
+    color: orangered;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.navbar .logo p span{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.navbar nav{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navbar nav ul li a{
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+}
+
+.navbar nav ul li a::after{
+    content: '';
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s ease;
+}
+
+.navbar nav ul li a:hover::after{
+    transform: scaleX(1);
+    transition: transform .3s ease;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
