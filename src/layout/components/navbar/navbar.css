@@ -6,8 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color:rgba(0,255,255,0.35);
-    
+    position: fixed;
 }
 
 .navbar .logo{
@@ -15,6 +14,8 @@
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: default;
+    user-select: none;
 }
 
 .navbar .logo p{
@@ -29,6 +30,7 @@
     font-weight: 600;
     color: rgba(0, 0, 0, 0.4);
     font-family: 'Sansita Swashed', cursive;
+    color: whitesmoke;
 }
 
 .navbar nav{
@@ -50,11 +52,12 @@
     font-weight: 600;
     font-size: 14px;
     position: relative;
+    color: #fff;
 }
 
 .navbar nav ul li a::after{
     content: '';
-    background-color: #000;
+    background-color: #fff;
     height: 2px;
     width: 100%;
     position: absolute;
