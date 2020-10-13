@@ -18,19 +18,9 @@
     user-select: none;
 }
 
-.navbar .logo p{
-    font-size: 24px;
-    font-weight: bold;
-    color: orangered;
-    font-family: 'Sansita Swashed', cursive;
-}
-
-.navbar .logo p span{
-    font-size: 22px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.4);
-    font-family: 'Sansita Swashed', cursive;
-    color: whitesmoke;
+.navbar .logo img{
+  width: 200px;
+  height: 200px;
 }
 
 .navbar nav{
