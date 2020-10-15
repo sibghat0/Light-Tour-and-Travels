@@ -104,7 +104,7 @@ a {
   overflow: hidden;
 }
 
-.navbar nav ul li:hover .tours{
+.navbar nav ul li:hover .tours {
   transform: scaleX(1);
   transition: transform 0.5s ease;
 }
@@ -123,7 +123,7 @@ a {
   cursor: pointer;
 }
 
-.navbar nav ul li .tours p:first-child{
+.navbar nav ul li .tours p:first-child {
   margin-top: 5px;
 }
 
@@ -140,49 +140,49 @@ a {
   transition: transform 0.3s ease;
 }
 
-.navbar nav ul li .tours p:hover::after, .navbar {
-    transform: scaleX(1);
-    transition: transform 0.3s ease;
+.navbar nav ul li .tours p:hover::after{
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
 }
 
-.navbar nav ul li .tours .inactiveLeft{
+.navbar nav ul li .tours .inactiveLeft {
   transform: translateX(-140%);
   transition: transform 0.2s;
   height: auto;
   width: auto;
 }
 
-.navbar nav ul li .tours .inactiveLeft.active{
+.navbar nav ul li .tours .inactiveLeft.active {
   transform: translateX(10%);
   transition: transform 0.2s;
 }
 
-.navbar nav ul li .tours .inactiveRight{
+.navbar nav ul li .tours .inactiveRight {
   transform: translateX(100%);
   transition: transform 0.2s;
   height: auto;
   width: auto;
 }
 
-.navbar nav ul li .tours .inactiveRight.active{
+.navbar nav ul li .tours .inactiveRight.active {
   transform: translateX(-95%);
   transition: transform 0.2s;
 }
 
-.navbar nav ul li .tours .inactiveRight2{
+.navbar nav ul li .tours .inactiveRight2 {
   transform: translateX(100%);
   transition: transform 0.2s;
   height: auto;
   width: auto;
 }
 
-.navbar nav ul li .tours .inactiveRight2.active{
+.navbar nav ul li .tours .inactiveRight2.active {
   transform: translateX(-190%);
   transition: transform 0.2s;
 }
 
 .navbar nav ul li .tours .inactiveRight i,
-.navbar nav ul li .tours .inactiveRight2 i{
+.navbar nav ul li .tours .inactiveRight2 i {
   color: white;
   cursor: pointer;
 }
