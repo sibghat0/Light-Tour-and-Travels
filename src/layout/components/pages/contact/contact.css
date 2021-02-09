@@ -1,0 +1,209 @@
+.contact-back {
+  width: 100%;
+  height: 100%;
+  filter: blur(95%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  backdrop-filter: blur(15px);
+}
+
+.contact-back .contact {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid lightgrey;
+}
+
+.contact-back .contact i {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #000;
+  cursor: pointer;
+}
+
+.contact-back .contact .contact-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+
+.contact-back .contact .contact-head .left {
+  height: 30px;
+  margin-right: 4rem;
+}
+
+.contact-back .contact .contact-head .left img {
+  height: 200%;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.contact-back .contact .contact-head .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.contact-back .contact .contact-head .right p,
+.contact-back .contact .contact-head .right a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-back .contact .contact-head .right p:first-child {
+  margin-bottom: 5px;
+}
+
+.contact-back .contact .contact-head .right p:nth-child(3) {
+  margin: 2px 0;
+}
+
+.contact-back .contact .contact-body {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.contact-back .contact .contact-body .form-group {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact-back .contact .contact-body .form-group input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 0 1rem;
+  transition: border 0.2s;
+  background-color: #fff;
+}
+
+.contact-back .contact .contact-body .form-group input:focus {
+  border: 1px solid orangered;
+  transition: border 0.2s;
+}
+
+.contact-back .contact .contact-body .form-group input:focus ~ label {
+  top: -20%;
+  left: 0.7rem;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+  /* color: #fff; */
+  /* background-color: rgba(255, 255, 255, 0s.2); */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.contact-back .contact .contact-body .form-group label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  left: 16px;
+  transition: all 0.3s;
+  background-color: transparent;
+}
+
+.contact-back .contact .contact-body .form-group label.active {
+  top: -20%;
+  left: 0.7rem;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.contact-back .contact .contact-body .twoFields {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.contact-back .contact .contact-body .twoFields .form-group:first-child {
+  margin-right: 10px;
+}
+
+select {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 1rem;
+  background-color: #fff;
+}
+
+select:first-child {
+  margin-right: 10px;
+}
+
+.contact-back .contact .contact-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.contact-back .contact .contact-footer button {
+  padding: 0.7rem 2rem;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #40ae77;
+  border: 1px solid #40ae77;
+  box-shadow: inset -2px -2px 7px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 7px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-back .contact .contact-footer button:active {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.6);
+  background-color: #40ae77;
+}
+
+@media (max-width: 680px) {
+  .contact-back .contact .contact-head .left {
+    margin-bottom: 10px;
+  }
+  .contact-back .contact .contact-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-back .contact .contact-body {
+    padding: 0;
+  }
+}
