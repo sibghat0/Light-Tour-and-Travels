@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "./cars.css";
 
+import car1 from "../../../../assets/car1.png";
+import car2 from "../../../../assets/car2.jpg";
+import car3 from "../../../../assets/car3.jpg";
+import car4 from "../../../../assets/car4.jpg";
+
 export default class Cars extends Component {
   render() {
     const settings = {
@@ -15,22 +20,16 @@ export default class Cars extends Component {
       <div>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <img src={car1} alt="img" />
           </div>
           <div>
-            <h3>2</h3>
+            <img src={car2} alt="img" />
           </div>
           <div>
-            <h3>3</h3>
+            <img src={car3} alt="img" />
           </div>
           <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
+            <img src={car4} alt="img" />
           </div>
         </Slider>
       </div>
