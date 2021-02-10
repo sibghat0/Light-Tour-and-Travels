@@ -16,6 +16,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/vehicles" component={Cars} />
       </Switch>
+      <Footer />
     </div>
   );
 }

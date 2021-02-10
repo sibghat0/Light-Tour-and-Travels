@@ -12,7 +12,7 @@ import howrah from "../../../../../assets/howrah bridge.jpg";
 export default class Hero extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       autoplay: true,
       autoplaySpeed: 3000,
