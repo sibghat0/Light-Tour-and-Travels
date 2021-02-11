@@ -1,0 +1,42 @@
+.aboutTour {
+  padding: 0 100px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.aboutTour::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.aboutTour .tourCard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.aboutTour .tourCard .left {
+  width: 38%;
+}
+
+.aboutTour .tourCard .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutTour .tourCard .right {
+  padding: 0 50px;
+  width: 60%;
+}
+
+.aboutTour .tourCard .right h3 {
+  font-size: 32px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  margin: 30px 0;
+}

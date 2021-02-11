@@ -19,6 +19,7 @@ export default class Hero extends Component {
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
+      pauseOnHover: false,
     };
     return (
       <div className="hero">
