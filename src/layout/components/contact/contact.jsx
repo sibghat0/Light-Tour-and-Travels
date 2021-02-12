@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./contact.css";
-import logo from "../../../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import indianCities from "indian-states-cities";
 import axios from "axios";
 // import toaster from "toasted-notes";

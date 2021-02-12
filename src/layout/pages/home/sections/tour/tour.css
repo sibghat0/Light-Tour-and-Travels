@@ -1,0 +1,78 @@
+.tour {
+  padding: 50px 100px;
+}
+
+.tour p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f3961c;
+}
+
+.tour h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.tour .cards {
+  padding: 30px;
+}
+
+.tour .cards .slick-slide {
+  margin-top: 30px;
+  margin-bottom: 0;
+  transition: margin 0.2s;
+}
+
+.tour .cards .slick-slide div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour .cards .slick-active:nth-child(2):not(.slick-current) {
+  margin-bottom: 30px;
+  margin-top: 0;
+  transition: margin 0.2s;
+}
+
+.tour .cards .slick-prev {
+  left: auto;
+  right: 30px;
+  top: auto;
+  bottom: -80px;
+  background-color: #77777750;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.tour .cards .slick-next {
+  right: -10px;
+  top: auto;
+  bottom: -80px;
+  background-color: #77777750;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.tour .cards .slick-prev::before {
+  content: "\f060";
+  color: #555;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour .cards .slick-next::before {
+  content: "\f061";
+  color: #555;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

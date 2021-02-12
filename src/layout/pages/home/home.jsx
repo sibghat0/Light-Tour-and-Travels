@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./home.css";
 import AboutTour from "./sections/aboutTour/aboutTour";
+import Connect from "./sections/connect/connect";
 import Hero from "./sections/hero/hero";
 import Map from "./sections/map/map";
+import Tour from "./sections/tour/tour";
 import ToursWeProvide from "./sections/toursWeProvide/toursWeProvide";
 
 export default class Home extends Component {
@@ -13,6 +15,8 @@ export default class Home extends Component {
         <Map />
         <AboutTour />
         <ToursWeProvide />
+        <Connect />
+        <Tour />
       </div>
     );
   }

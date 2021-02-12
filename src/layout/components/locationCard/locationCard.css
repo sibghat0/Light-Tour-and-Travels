@@ -1,0 +1,23 @@
+.locationCard {
+  position: relative;
+  width: 350px;
+  height: 480px;
+  /* background-color: red; */
+}
+
+.locationCard img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  filter: brightness(75%);
+}
+
+.locationCard h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  color: #fff;
+  text-align: center;
+}
