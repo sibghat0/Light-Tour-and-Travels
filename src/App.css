@@ -15,3 +15,14 @@ a {
 .App {
   position: relative;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8b8a88;
+  border-radius: 5px;
+}

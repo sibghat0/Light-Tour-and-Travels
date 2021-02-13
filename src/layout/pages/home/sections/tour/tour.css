@@ -1,5 +1,6 @@
 .tour {
   padding: 50px 100px;
+  margin-bottom: 50px;
 }
 
 .tour p {
@@ -30,7 +31,7 @@
   justify-content: center;
 }
 
-.tour .cards .slick-active:nth-child(2):not(.slick-current) {
+.tour .cards .slick-center {
   margin-bottom: 30px;
   margin-top: 0;
   transition: margin 0.2s;
