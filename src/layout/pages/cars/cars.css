@@ -1,12 +1,17 @@
 .cars-cont {
   width: 100%;
   height: 100%;
+  /* overflow-y: hidden; */
+}
+
+.cars-cont .topSlider {
+  height: 100vh;
   overflow-y: hidden;
 }
 
 .cars-cont .cont:nth-child(1) {
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: contain;
 }
 

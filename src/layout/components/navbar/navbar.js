@@ -9,7 +9,7 @@ export default class Navbar extends Component {
         <img src={logo} alt="" />
         <div className="nav">
           <a href="/">Home</a>
-          <a href="/">Vehicles</a>
+          <a href="/vehicles">Vehicles</a>
           <a href="/">Gallery</a>
           <a href="/">Tour</a>
           <a href="/">Travels</a>

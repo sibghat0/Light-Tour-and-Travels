@@ -27,27 +27,29 @@ export default class Cars extends Component {
     return (
       <div className="cars-cont">
         {/* <h4>First Slider</h4> */}
-        <Slider
-          className="cont"
-          fade={true}
-          speed={1000}
-          infinite={true}
-          asNavFor={this.state.nav2}
-          ref={(slider) => (this.slider1 = slider)}
-        >
-          <div>
-            <img src={car1} alt="img" />
-          </div>
-          <div>
-            <img src={car2} alt="img" />
-          </div>
-          <div>
-            <img src={car3} alt="img" />
-          </div>
-          <div>
-            <img src={car4} alt="img" />
-          </div>
-        </Slider>
+        <div className="topSlider">
+          <Slider
+            className="cont"
+            fade={true}
+            speed={1000}
+            infinite={true}
+            asNavFor={this.state.nav2}
+            ref={(slider) => (this.slider1 = slider)}
+          >
+            <div>
+              <img src={car1} alt="img" />
+            </div>
+            <div>
+              <img src={car2} alt="img" />
+            </div>
+            <div>
+              <img src={car3} alt="img" />
+            </div>
+            <div>
+              <img src={car4} alt="img" />
+            </div>
+          </Slider>
+        </div>
         <Slider
           className="cont"
           asNavFor={this.state.nav1}
