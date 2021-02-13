@@ -1,13 +1,20 @@
 .cars-cont {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   overflow-y: hidden;
 }
 
-.cars-cont .cont img {
-  width: 1400px;
-
+.cars-cont .cont:nth-child(1) {
+  width: 100%;
+  height: 90%;
   object-fit: contain;
+}
+
+.cars-cont .cont img {
+  /* width: 1000px; */
+  /* height: 100%; */
+  width: 100%;
+  /* object-fit: contain; */
 }
 
 .cars-cont .cont {
@@ -44,4 +51,46 @@
 
 .cars-cont .sec-cont .car-des ul li {
   margin: 0 0 1rem 0;
+}
+
+/*button*/
+
+.cars-cont .slick-next {
+  right: 0;
+}
+
+.cars-cont .slick-prev {
+  left: 0;
+  z-index: 2;
+}
+
+.cars-cont .slick-next,
+.cars-cont .slick-prev {
+  top: 35%;
+  background-color: #00000060;
+  width: 40px;
+  height: 50px;
+  color: #fff;
+  z-index: 99;
+}
+
+.cars-cont .slick-next:hover,
+.cars-cont .slick-prev:hover {
+  background-color: #00000060;
+}
+
+.cars-cont .slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 25px;
+  content: "\f054";
+  font-weight: 900;
+  color: #fff;
+}
+
+.cars-cont .slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 25px;
+  content: "\f053";
+  font-weight: 900;
+  color: #fff;
 }
