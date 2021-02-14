@@ -11,9 +11,9 @@ export default class Navbar extends Component {
           <a href="/">Home</a>
           <a href="/vehicles">Vehicles</a>
           <a href="/">Gallery</a>
-          <a href="/">Tour</a>
-          <a href="/">Travels</a>
-          <a href="/">About</a>
+          <a href="/tour">Tour</a>
+          <a href="/travel">Travels</a>
+          <a href="/about">About</a>
         </div>
       </div>
     );

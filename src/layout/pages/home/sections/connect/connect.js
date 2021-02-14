@@ -10,7 +10,9 @@ export default class Connect extends Component {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quasi
           asperiores numquam minima autem beatae?
         </p>
-        <button type="button">Click Here</button>
+        <a href="/contact">
+          <button type="button">Click Here</button>
+        </a>
       </div>
     );
   }
