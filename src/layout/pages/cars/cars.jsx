@@ -60,6 +60,7 @@ export default class Cars extends Component {
           fade={true}
           speed={1000}
           infinite={true}
+          arrows={false}
         >
           <div className="sec-cont">
             <div className="car-des">

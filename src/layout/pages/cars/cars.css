@@ -42,15 +42,8 @@
 }
 
 .cars-cont .sec-cont .car-des h4 {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   font-size: 22px;
-}
-
-.cars-cont .sec-cont .car-des:nth-child(2) h4 {
-  margin-top: 4rem;
-}
-
-.cars-cont .sec-cont .car-des:nth-child(3) h4 {
   margin-top: 4rem;
 }
 
