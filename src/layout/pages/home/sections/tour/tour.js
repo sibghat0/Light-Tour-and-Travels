@@ -10,9 +10,10 @@ export default class Tour extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 1,
+      // slidesToScroll: 1,
       centerMode: true,
       centerPadding: "0px",
+      swipeToSlide: true,
     };
     return (
       <div className="tour">
