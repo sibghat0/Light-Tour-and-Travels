@@ -43,7 +43,7 @@
 
 .cars-cont .sec-cont .car-des h4 {
   margin: 2rem 0;
-  font-size: 22px;
+  font-size: 32px !important;
   margin-top: 4rem;
 }
 
@@ -64,7 +64,7 @@
 
 .cars-cont .slick-next,
 .cars-cont .slick-prev {
-  top: 35%;
+  top: 50% !important;
   background-color: #00000060;
   width: 40px;
   height: 50px;

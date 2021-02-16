@@ -9,6 +9,7 @@ import TravelMe from "./layout/pages/travel/travel";
 import Contact from "./layout/pages/contact/contact";
 import Tourme from "./layout/pages/tour/tour";
 import GalleryIn from "./layout/pages/galleryIn/galleryIn";
+import Gallery from "./layout/pages/gallery/gallery";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/travel" component={TravelMe} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/gallery/:id" component={GalleryIn} />
+        <Route exact path="/gallery" component={Gallery} />
       </Switch>
       <Footer />
     </div>
