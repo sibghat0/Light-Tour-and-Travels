@@ -1,31 +1,76 @@
 .map {
-  padding: 0 100px;
+  padding: 50px 100px;
   display: flex;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.map::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../../../assets/boats.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .map .left {
   width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .map .left img {
-  width: 100%;
+  width: 90%;
   object-fit: contain;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px #ffffff;
 }
 
 .map .right {
   width: 50%;
-  padding: 50px 100px;
+  padding: 0 100px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.map .right h4 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative;
+  /* text-decoration: underline; */
+}
+
+.map .right h4::before {
+  content: "";
+  width: 81%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
 }
 
 .map .right ul {
   display: flex;
   flex-direction: column;
+  padding-left: 25px;
 }
 
 .map .right ul li {
-  color: #000;
+  color: #fff;
   font-size: 20px;
   margin-bottom: 20px;
 }

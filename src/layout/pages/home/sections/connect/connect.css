@@ -31,6 +31,7 @@
   font-weight: 500;
   margin: 30px 0;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .connect button:hover {

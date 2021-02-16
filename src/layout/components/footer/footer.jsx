@@ -70,7 +70,7 @@ export default class Footer extends Component {
           <p>
             &copy; {new Date().getFullYear()} | Light Tour and Travels | All
             Right Reserved | Powered by{" "}
-            <a href="https://theorydev.com">
+            <a href="https://theorydev.com" target="_blank">
               <strong>TheoryDev</strong>
             </a>
           </p>

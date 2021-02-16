@@ -10,6 +10,7 @@ export default class Map extends Component {
           <img src={map} alt="" />
         </div>
         <div className="right">
+          <h4>TRAVEL ALL OVER INDIA</h4>
           <ul>
             <li>Kolkata</li>
             <li>Mumbai</li>

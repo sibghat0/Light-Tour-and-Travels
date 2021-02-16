@@ -1,0 +1,52 @@
+.galleryIn {
+  margin-top: 60px;
+}
+
+.galleryIn .heading {
+  padding: 50px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.galleryIn .heading h4 {
+  font-size: 36px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.galleryIn .heading i {
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  font-size: 36px;
+  transition: color 0.3s;
+}
+
+.galleryIn .heading i:active {
+  transform: scale(0.95);
+}
+
+.galleryIn .heading i.grey-star {
+  color: #77777750;
+}
+
+.galleryIn .heading i.golden-star {
+  color: #ffd700;
+}
+
+.galleryIn .body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 120px;
+  /* justify-content: space-between; */
+}
+
+.galleryIn .body img {
+  /* width: 24%; */
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  object-fit: contain;
+  margin-right: 10px;
+}

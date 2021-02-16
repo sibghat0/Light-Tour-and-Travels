@@ -8,9 +8,9 @@ import Cars from "./layout/pages/cars/cars";
 import TravelMe from "./layout/pages/travel/travel";
 import Contact from "./layout/pages/contact/contact";
 import Tourme from "./layout/pages/tour/tour";
+import GalleryIn from "./layout/pages/galleryIn/galleryIn";
 
 function App() {
-  const location = useLocation();
   return (
     <div className="App">
       <Navbar />
@@ -20,6 +20,7 @@ function App() {
         <Route exact path="/tour" component={Tourme} />
         <Route exact path="/travel" component={TravelMe} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/gallery/:id" component={GalleryIn} />
       </Switch>
       <Footer />
     </div>

@@ -25,7 +25,7 @@ export default class Hero extends Component {
     return (
       <div className="hero">
         <h3>
-          <img src={logo} alt="" />
+          {/* <img src={logo} alt="" /> */}
           Light
           <br />
           Tour and Travels
