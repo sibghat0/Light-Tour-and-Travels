@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./galleryIn.css";
 import firebase from "firebase";
+import Slider from "react-slick";
 
 export default class GalleryIn extends Component {
   constructor(props) {
@@ -8,10 +9,14 @@ export default class GalleryIn extends Component {
     this.state = {
       star: false,
       images: [],
+      slider: false,
+      currentIndex: 0,
     };
   }
 
   componentDidMount() {
+    var starred = JSON.parse(localStorage.getItem("starredGallery"));
+    console.log(starred);
     firebase
       .firestore()
       .collection("gallery")
@@ -20,11 +25,47 @@ export default class GalleryIn extends Component {
       .then((doc) => {
         this.setState({
           images: doc.data().images,
+          star: starred
+            ? starred.includes("U1tmSHYcBU4UZjLo5eYe")
+              ? true
+              : false
+            : false,
         });
       });
   }
 
+  handleStar = () => {
+    var starred = JSON.parse(localStorage.getItem("starredGallery"))
+      ? JSON.parse(localStorage.getItem("starredGallery"))
+      : [];
+    console.log(starred);
+    if (this.state.star) {
+      var filtered = starred.filter((star) => star !== "U1tmSHYcBU4UZjLo5eYe");
+      localStorage.setItem("starredGallery", JSON.stringify(filtered));
+      this.setState({
+        star: false,
+      });
+    } else {
+      starred.push("U1tmSHYcBU4UZjLo5eYe");
+      console.log(starred);
+      localStorage.setItem("starredGallery", JSON.stringify(starred));
+      this.setState({
+        star: true,
+      });
+    }
+  };
+
   render() {
+    const settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      customPaging: (i) => {
+        return <img src={this.state.images[i]} alt="" className="imageDots" />;
+      },
+    };
     return (
       <div className="galleryIn">
         <div className="heading">
@@ -35,14 +76,58 @@ export default class GalleryIn extends Component {
                 ? "fas fa-star golden-star"
                 : "fas fa-star grey-star"
             }
-            onClick={() => this.setState({ star: !this.state.star })}
+            onClick={this.handleStar}
           ></i>
         </div>
         <div className="body">
-          {this.state.images.map((image) => {
-            return <img src={image} alt="" />;
+          {this.state.images.map((image, index) => {
+            return (
+              <div
+                onClick={() => {
+                  this.setState(
+                    {
+                      currentIndex: index,
+                      slider: true,
+                    },
+                    () => this.slider.slickGoTo(this.state.currentIndex)
+                  );
+
+                  document.getElementsByTagName("body")[0].style.overflow =
+                    "hidden";
+                }}
+                key={index}
+              >
+                <img src={image} alt="" />
+              </div>
+            );
           })}
         </div>
+        {this.state.slider ? (
+          <div className="slider">
+            <i
+              className="fas fa-times"
+              onClick={() =>
+                this.setState(
+                  {
+                    slider: false,
+                  },
+                  () =>
+                    (document.getElementsByTagName("body")[0].style.overflow =
+                      "auto")
+                )
+              }
+            ></i>
+            <Slider ref={(slider) => (this.slider = slider)} {...settings}>
+              {this.state.images.map((image, index) => {
+                return (
+                  <div className="sliderImage" key={index}>
+                    <img src={image} alt="" />;
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+        ) : null}
       </div>
     );
   }
