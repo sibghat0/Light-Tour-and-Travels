@@ -115,3 +115,101 @@
 .footer .bottom p a {
   color: #40ae77;
 }
+
+@media (max-width: 1024px) {
+  .footer::before {
+    background-size: cover;
+  }
+
+  .footer .top {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .footer .top .left {
+    width: 100%;
+  }
+
+  .footer .top .left .content {
+    width: 100%;
+  }
+
+  .footer .top .right {
+    width: 60%;
+    padding: 50px 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .top .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer {
+    padding: 35px 40px 0;
+  }
+
+  .footer .top .left .logoSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .top .left .logoSection img {
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .footer .top .left .logoSection .details {
+    margin: 0;
+  }
+
+  .footer .top .left .logoSection .details h3 {
+    font-size: 30px;
+  }
+
+  .footer .top .left .logoSection .details p {
+    font-size: 18px;
+  }
+
+  .footer .top .right {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+
+  .footer .top .right .nav-links {
+    margin-bottom: 20px;
+  }
+
+  .footer .top .right .nav-links h4 {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+
+  .footer .bottom {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer {
+    padding: 35px 35px 0;
+  }
+
+  .footer .top .left .logoSection .details h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    padding: 30px 20px 0;
+  }
+
+  .footer .top .left .logoSection .details h3 {
+    font-size: 26px;
+  }
+}

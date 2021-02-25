@@ -8,7 +8,6 @@ import museum from "../../../../../assets/indian museum.jpg";
 import thakurbari from "../../../../../assets/thakurbari.jpg";
 import parkStreet from "../../../../../assets/park street.jpg";
 import howrah from "../../../../../assets/howrah bridge.jpg";
-import logo from "../../../../../assets/logo.png";
 
 export default class Hero extends Component {
   render() {

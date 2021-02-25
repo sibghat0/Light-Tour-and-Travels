@@ -46,3 +46,45 @@
   line-height: 30px;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .toursWeProvide {
+    padding: 50px;
+  }
+
+  .toursWeProvide .cards .card {
+    width: 32%;
+  }
+
+  .toursWeProvide .cards .card .bottom p {
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toursWeProvide .cards {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+
+  .toursWeProvide .cards .card {
+    width: 320px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .toursWeProvide {
+    padding: 30px;
+  }
+
+  .toursWeProvide h2 {
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .toursWeProvide {
+    padding: 20px;
+  }
+}
