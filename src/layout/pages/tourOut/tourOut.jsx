@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import manali from "../../../assets/manali1.JPG";
-import "./gallery.css";
+import "./tourOut.css";
 
-export default class Gallery extends Component {
+export default class Tour extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,12 +16,12 @@ export default class Gallery extends Component {
   }
   render() {
     return (
-      <div className="gallery">
+      <div className="gallery-out">
         <div className="heading">
-          <h4>GALLERY</h4>
-          <a href="">
+          <h4>TOUR</h4>
+          {/* <a href="">
             <i className="far fa-star"></i> Starred
-          </a>
+          </a> */}
         </div>
         <div className="respo">
           {this.state.data.map((i) => {

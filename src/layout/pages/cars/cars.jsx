@@ -11,410 +11,69 @@ export default class Cars extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nav1: null,
-      nav2: null,
+      tab: 0,
+      data: [
+        {
+          img: car1,
+          h2: "INNOVA",
+          p: `The Toyota Innova has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 2494 cc while the Petrol engine is 
+              1998 cc . It is available with the Manual transmission. Depending upon the variant and fuel type the Innova has a mileage of 11.4 to 12.99 kmpl. The Innova is a 8 seater 
+              and has length of 4585mm, width of 1760mm and a wheelbase of 2750mm.`,
+        },
+        {
+          img: car2,
+          h2: "INNOVA",
+          p: `The Toyota Innova has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 2494 cc while the Petrol engine is 
+              1998 cc . It is available with the Manual transmission. Depending upon the variant and fuel type the Innova has a mileage of 11.4 to 12.99 kmpl. The Innova is a 8 seater 
+              and has length of 4585mm, width of 1760mm and a wheelbase of 2750mm.`,
+        },
+        {
+          img: car3,
+          h2: "HONDA CITY",
+          p: `The Honda City has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1498 cc while the Petrol engine is 1498 cc . It is available with the Manual &
+              Automatic transmission. Depending upon the variant and fuel type the City has a mileage of 17.8 to 24.1 kmpl. The City is a 5 seater and has length of 4549mm, width 
+              of 1748mm and a wheelbase of 2600mm.`,
+        },
+        {
+          img: car4,
+          h2: "Web Maintanance",
+          p: `We understand your dilemma! You want the website to
+          keep performing well and stay fruitful to you. At
+          Intlum, we take pride in maintaining the website on
+          your behalf, so that you don’t need to worry about the
+          engagement and optimization of your website. We keep
+          the flow of leads coming to our clients by maintaining
+          their websites and we want to keep on doing so by
+          maintaining the website and helping you retain the
+          leads for your business and keeping its standard
+          alive.`,
+        },
+      ],
     };
-  }
-
-  componentDidMount() {
-    this.setState({
-      nav1: this.slider1,
-      nav2: this.slider2,
-    });
   }
 
   render() {
     return (
-      <div className="cars-cont">
-        {/* <h4>First Slider</h4> */}
-        <div className="topSlider">
-          <Slider
-            className="cont"
-            fade={true}
-            speed={1000}
-            infinite={true}
-            asNavFor={this.state.nav2}
-            ref={(slider) => (this.slider1 = slider)}
-          >
-            <div>
-              <img src={car1} alt="img" />
-            </div>
-            <div>
-              <img src={car2} alt="img" />
-            </div>
-            <div>
-              <img src={car3} alt="img" />
-            </div>
-            <div>
-              <img src={car4} alt="img" />
-            </div>
-          </Slider>
+      <div className="services">
+        <h1>Cars We Provide</h1>
+        <div className="services-body">
+          {this.state.data.map((item) => {
+            return (
+              <div className="services-content">
+                <div className="top">
+                  <img src={item.img} alt="" />
+                  <div className="content">
+                    <h2>{item.h2}</h2>
+                    <p>{item.p}</p>
+                  </div>
+                </div>
+                <div className="bottom">
+                  {/* <img src="" alt="" className="arrow" /> */}
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <Slider
-          className="cont"
-          asNavFor={this.state.nav1}
-          ref={(slider) => (this.slider2 = slider)}
-          slidesToShow={1}
-          swipeToSlide={false}
-          focusOnSelect={true}
-          fade={true}
-          speed={1000}
-          infinite={true}
-          arrows={false}
-        >
-          <div className="sec-cont">
-            <div className="car-des">
-              <h4>MARUTI SUZUKI SWIFT DEZIRE</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                iure alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eveniet iure alias magni. Architecto, eos odio
-                possimus doloribus minima voluptas perferendis dolorum corrupti
-                ex maxime quasi, facilis officiis facere atque. Vitae.Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure
-                alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.
-              </p>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="sec-cont">
-            <div className="car-des">
-              <h4>MARUTI SUZUKI SWIFT DEZIRE</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                iure alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eveniet iure alias magni. Architecto, eos odio
-                possimus doloribus minima voluptas perferendis dolorum corrupti
-                ex maxime quasi, facilis officiis facere atque. Vitae.Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure
-                alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.
-              </p>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="sec-cont">
-            <div className="car-des">
-              <h4>MARUTI SUZUKI SWIFT DEZIRE</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                iure alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eveniet iure alias magni. Architecto, eos odio
-                possimus doloribus minima voluptas perferendis dolorum corrupti
-                ex maxime quasi, facilis officiis facere atque. Vitae.Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure
-                alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.
-              </p>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="sec-cont">
-            <div className="car-des">
-              <h4>MARUTI SUZUKI SWIFT DEZIRE</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                iure alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eveniet iure alias magni. Architecto, eos odio
-                possimus doloribus minima voluptas perferendis dolorum corrupti
-                ex maxime quasi, facilis officiis facere atque. Vitae.Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure
-                alias magni. Architecto, eos odio possimus doloribus minima
-                voluptas perferendis dolorum corrupti ex maxime quasi, facilis
-                officiis facere atque. Vitae.Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet iure alias magni.
-                Architecto, eos odio possimus doloribus minima voluptas
-                perferendis dolorum corrupti ex maxime quasi, facilis officiis
-                facere atque. Vitae.
-              </p>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-            <div className="car-des">
-              <h4>HIGHLIGHT</h4>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident magnam doloribus consectetur totam temporibus
-                  accusantium repellendus! Corporis, amet reprehenderit? Ex
-                  delectus error totam quisquam incidunt fugiat dicta, nobis
-                  repellendus sapiente?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae, eveniet nisi quam aspernatur maiores nihil est. Beatae
-                  assumenda ex tempore cupiditate vel natus. Nisi non
-                  consequatur aperiam aliquam. Pariatur, nisi?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, id laborum. Sed mollitia sint incidunt minus
-                  perferendis repellendus, officiis soluta voluptatum cumque
-                  laboriosam deserunt, maxime tempora accusamus, maiores debitis
-                  fuga.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  autem repudiandae nemo saepe quidem officiis. Temporibus quas
-                  fugiat consequuntur, pariatur, illum non deleniti iure qui sed
-                  officiis dolor quae. Architecto!
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Slider>
       </div>
     );
   }

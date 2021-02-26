@@ -1,11 +1,11 @@
-.gallery {
+.gallery-out {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 60px;
 }
 
-.gallery .heading {
+.gallery-out .heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,11 +14,11 @@
   padding: 50px 120px;
 }
 
-.gallery .heading h4 {
+.gallery-out .heading h4 {
   font-size: 30px;
 }
 
-.gallery .heading a {
+.gallery-out .heading a {
   padding: 10px 15px;
   border-radius: 15px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -27,7 +27,7 @@
   color: #000;
 }
 
-.gallery .heading a i {
+.gallery-out .heading a i {
   background-image: linear-gradient(
     -120deg,
     #4285f4,
@@ -42,42 +42,40 @@
   margin-right: 5px;
 }
 
-.gallery .heading a:focus {
+.gallery-out .heading a:focus {
   transform: scale(0.97);
 }
 
-.gallery .respo {
+.gallery-out .respo {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.gallery .gallery-cont {
+.gallery-out .gallery-cont {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  /* margin: 2rem; */
   padding: 0 40px;
 }
 
-.gallery .gallery-cont .gallery-show {
+.gallery-out .gallery-cont .gallery-show {
   height: 70%;
   width: 400px;
   position: relative;
   margin-left: 1.5rem;
   margin-bottom: 2rem;
-  /* background-color: #000; */
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.gallery .gallery-cont .gallery-show img {
+.gallery-out .gallery-cont .gallery-show img {
   /* height: 300px; */
   width: 100%;
   object-fit: contain;
@@ -87,7 +85,7 @@
   z-index: -1;
 }
 
-.gallery .gallery-cont .gallery-show .content {
+.gallery-out .gallery-cont .gallery-show .content {
   /* position: absolute;
   bottom: 25%; */
   display: flex;
@@ -99,8 +97,8 @@
   box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.15);
 }
 
-.gallery .gallery-cont .gallery-show .content p {
-  font-size: 30px;
+.gallery-out .gallery-cont .gallery-show .content p {
+  font-size: 26px;
   /* padding: 1rem 1rem 0 0; */
   padding: 1rem 0;
   font-weight: 500;
@@ -110,7 +108,7 @@
 }
 
 @media (max-width: 1350px) {
-  .gallery .gallery-cont {
+  .gallery-out .gallery-cont {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -119,37 +117,37 @@
 }
 
 @media (max-width: 680px) {
-  .gallery .heading {
+  .gallery-out .heading {
     padding: 50px 70px;
   }
 }
 
 @media (max-width: 580px) {
-  .gallery .heading {
+  .gallery-out .heading {
     padding: 50px 40px;
   }
 
-  .gallery .heading h4 {
+  .gallery-out .heading h4 {
     font-size: 24px;
   }
 
-  .gallery .gallery-cont .gallery-show .content p {
+  .gallery-out .gallery-cont .gallery-show .content p {
     font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .gallery .heading {
+  .gallery-out .heading {
     padding: 50px 20px;
   }
 }
 
 @media (max-width: 400px) {
-  .gallery .heading h4 {
+  .gallery-out .heading h4 {
     font-size: 20px;
   }
 
-  .gallery .gallery-cont .gallery-show .content p {
+  .gallery-out .gallery-cont .gallery-show .content p {
     font-size: 22px;
   }
 }

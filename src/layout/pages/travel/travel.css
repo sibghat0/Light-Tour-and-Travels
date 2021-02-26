@@ -2,24 +2,22 @@
   width: 100%;
   height: 100%;
   /* overflow-y: hidden; */
+  background-color: rgb(2, 23, 27);
+  color: #fff;
 }
 
-.cars-cont .topSlider {
-  height: 100vh;
-  overflow-y: hidden;
-}
-
-.cars-cont .cont:nth-child(1) {
+.cars-cont .image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
 }
 
-.cars-cont .cont img {
-  /* width: 1000px; */
-  /* height: 100%; */
-  width: 100%;
-  /* object-fit: contain; */
+.cars-cont .image img {
+  width: 70%;
+  margin: 2rem;
+  box-shadow: 5px 5px 15px rgb(128, 128, 128);
 }
 
 .cars-cont .cont {
@@ -39,56 +37,39 @@
 
 .cars-cont .sec-cont .car-des {
   padding: 0 6rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .cars-cont .sec-cont .car-des h4 {
-  margin: 2rem 0;
-  font-size: 22px;
+  margin: 2rem 1rem;
+  font-size: 30px;
   margin-top: 4rem;
 }
 
-.cars-cont .sec-cont .car-des ul li {
+.cars-cont .sec-cont .car-des .other {
   margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 0 15px rgb(128, 128, 128);
 }
 
-/*button*/
-
-.cars-cont .slick-next {
-  right: 0;
+.cars-cont .sec-cont .car-des .other .section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
-.cars-cont .slick-prev {
-  left: 0;
-  z-index: 2;
+.cars-cont .sec-cont .car-des .other .section img {
+  width: 30%;
+  border-radius: 7px;
 }
 
-.cars-cont .slick-next,
-.cars-cont .slick-prev {
-  top: 35%;
-  background-color: #00000060;
-  width: 40px;
-  height: 50px;
-  color: #fff;
-  z-index: 99;
-}
-
-.cars-cont .slick-next:hover,
-.cars-cont .slick-prev:hover {
-  background-color: #00000060;
-}
-
-.cars-cont .slick-next::before {
-  font-family: "Font Awesome 5 Free";
+.cars-cont .sec-cont .car-des .other .section h4 {
   font-size: 25px;
-  content: "\f054";
-  font-weight: 900;
-  color: #fff;
-}
-
-.cars-cont .slick-prev::before {
-  font-family: "Font Awesome 5 Free";
-  font-size: 25px;
-  content: "\f053";
-  font-weight: 900;
-  color: #fff;
 }
