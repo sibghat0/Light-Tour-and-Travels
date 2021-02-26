@@ -20,3 +20,10 @@
   color: #fff;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .locationCard {
+    width: 270px;
+    height: 400px;
+  }
+}

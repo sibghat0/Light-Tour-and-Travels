@@ -9,10 +9,21 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.white {
+  background-color: #fff;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .navbar img {
   height: 80%;
+}
+
+.navbar.white img {
+  filter: invert(95%);
 }
 
 .navbar .nav {
@@ -30,6 +41,10 @@
   align-items: center;
 }
 
+.navbar.white .nav a {
+  color: #333;
+}
+
 .navbar .nav a::after {
   content: "";
   position: absolute;
@@ -43,7 +58,99 @@
   transition: transform 0.3s ease;
 }
 
+.navbar.white .nav a::after {
+  background-color: #333;
+}
+
 .navbar .nav a:hover::after {
   transform: scaleX(1);
   transition: transform 0.3s ease;
+}
+
+.navbar .hamburgerLines {
+  width: 20px;
+  height: 15px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .hamburgerLines .line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.navbar .hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  display: none;
+  flex-direction: column;
+  padding: 100px;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .hamburger a {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.navbar .hamburger a i {
+  margin-right: 15px;
+}
+
+.navbar .hamburger i.fa-times {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar .hamburger.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #fff;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #999;
+  }
+
+  .navbar img {
+    filter: invert(95%);
+  }
+
+  .navbar .nav {
+    display: none;
+  }
+
+  .navbar .hamburgerLines {
+    display: flex;
+  }
+
+  .navbar .hamburgerLines .line {
+    background-color: #333;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar {
+    padding: 0 20px;
+    height: 50px;
+  }
+  .navbar img {
+    height: 70%;
+  }
+  .navbar .hamburger {
+    padding: 100px 50px;
+  }
 }

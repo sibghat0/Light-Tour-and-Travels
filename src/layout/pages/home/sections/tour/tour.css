@@ -76,3 +76,52 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1024px) {
+  .tour {
+    padding: 50px;
+    padding-bottom: 100px;
+  }
+
+  .tour .cards {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .tour {
+    padding: 30px;
+  }
+
+  .tour p {
+    margin-bottom: 10px;
+  }
+
+  .tour h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .tour .cards {
+    padding: 0;
+  }
+
+  .tour .cards .slick-prev,
+  .tour .cards .slick-next {
+    bottom: -30px;
+  }
+
+  .tour .cards .slick-prev {
+    right: 50px;
+  }
+
+  .tour .cards .slick-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .tour {
+    padding: 20px;
+  }
+}

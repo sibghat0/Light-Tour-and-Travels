@@ -26,3 +26,9 @@ a {
   background-color: #8b8a88;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .App {
+    padding-top: 50px;
+  }
+}

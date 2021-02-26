@@ -16,7 +16,6 @@ export default class GalleryIn extends Component {
 
   componentDidMount() {
     var starred = JSON.parse(localStorage.getItem("starredGallery"));
-    console.log(starred);
     firebase
       .firestore()
       .collection("gallery")
@@ -38,7 +37,6 @@ export default class GalleryIn extends Component {
     var starred = JSON.parse(localStorage.getItem("starredGallery"))
       ? JSON.parse(localStorage.getItem("starredGallery"))
       : [];
-    console.log(starred);
     if (this.state.star) {
       var filtered = starred.filter((star) => star !== "U1tmSHYcBU4UZjLo5eYe");
       localStorage.setItem("starredGallery", JSON.stringify(filtered));
@@ -47,7 +45,6 @@ export default class GalleryIn extends Component {
       });
     } else {
       starred.push("U1tmSHYcBU4UZjLo5eYe");
-      console.log(starred);
       localStorage.setItem("starredGallery", JSON.stringify(starred));
       this.setState({
         star: true,

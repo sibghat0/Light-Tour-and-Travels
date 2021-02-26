@@ -12,11 +12,11 @@ export default class Home extends Component {
     return (
       <div className="home">
         <Hero />
+        <Tour />
         <Map />
         <AboutTour />
-        <ToursWeProvide />
         <Connect />
-        <Tour />
+        <ToursWeProvide />
       </div>
     );
   }

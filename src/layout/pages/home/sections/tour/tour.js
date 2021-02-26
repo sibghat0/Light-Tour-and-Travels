@@ -14,6 +14,22 @@ export default class Tour extends Component {
       centerMode: true,
       centerPadding: "0px",
       swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2.35,
+            swipeToSlide: false,
+          },
+        },
+        {
+          breakpoint: 680,
+          settings: {
+            slidesToShow: 1,
+            swipeToSlide: false,
+          },
+        },
+      ],
     };
     return (
       <div className="tour">
