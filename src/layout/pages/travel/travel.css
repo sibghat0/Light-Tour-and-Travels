@@ -17,6 +17,7 @@
 .cars-cont .image img {
   width: 70%;
   margin: 2rem;
+  border-radius: 3px;
   box-shadow: 5px 5px 15px rgb(128, 128, 128);
 }
 
@@ -42,7 +43,7 @@
 }
 
 .cars-cont .sec-cont .car-des h4 {
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   font-size: 30px;
   margin-top: 4rem;
 }
@@ -53,6 +54,9 @@
   flex-direction: column;
   width: 100%;
   box-shadow: 0 0 15px rgb(128, 128, 128);
+  border-radius: 25px;
+  background-color: #fff;
+  color: #000;
 }
 
 .cars-cont .sec-cont .car-des .other .section {
@@ -72,4 +76,30 @@
 
 .cars-cont .sec-cont .car-des .other .section h4 {
   font-size: 25px;
+}
+
+@media (max-width: 780px) {
+  .cars-cont .sec-cont .car-des {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .cars-cont .sec-cont .car-des h4 {
+    font-size: 25px;
+  }
+
+  .cars-cont .sec-cont .car-des {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .cars-cont .sec-cont .car-des h4 {
+    font-size: 20px;
+  }
+
+  .cars-cont .sec-cont .car-des {
+    padding: 0 2rem;
+  }
 }
