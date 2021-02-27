@@ -1,19 +1,32 @@
 import React, { Component } from "react";
-import manali from "../../../assets/manali1.JPG";
 import "./gallery.css";
+import firebase from "firebase";
 
 export default class Gallery extends Component {
   constructor() {
     super();
     this.state = {
-      data: [
-        {
-          img: manali,
-          name: "Manali Tour",
-        },
-      ],
+      data: [],
     };
   }
+
+  componentDidMount() {
+    firebase
+      .firestore()
+      .collection("gallery")
+      .get()
+      .then((snap) => {
+        var temp = [];
+        snap.forEach((doc) => {
+          const data = doc.data();
+          temp.push(data);
+        });
+        this.setState({
+          data: temp,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="gallery">
@@ -30,43 +43,43 @@ export default class Gallery extends Component {
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">
-                    <p>{i.name}</p>
+                    <p>{i.Name}</p>
                   </div>
                 </div>
               </div>
