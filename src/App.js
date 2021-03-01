@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Switch, Route, useLocation } from "react-router-dom";
 import Navbar from "./layout/components/navbar/navbar";
@@ -12,19 +12,31 @@ import Gallery from "./layout/pages/gallery/gallery";
 import Tour from "./layout/pages/tourOut/tourOut";
 
 function App() {
+  const [contact, setContact] = useState(false);
+  useEffect(() => {
+    if (contact) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [contact]);
   return (
     <div className="App">
-      <Navbar />
+      <Navbar
+        handleContact={() => {
+          setContact(true);
+        }}
+      />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/vehicles" component={Cars} />
-        <Route exact path="/travel/:id" component={TravelMe} />
-        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/travel" component={TravelMe} />
         <Route exact path="/gallery/:id" component={GalleryIn} />
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/travel" component={Tour} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
+      {contact ? <Contact close={() => setContact(false)} /> : null}
     </div>
   );
 }

@@ -11,7 +11,7 @@
   font-size: 40px;
   color: #fff;
   margin: 40px 0;
-  text-shadow: 5px 5px 15px rgb(0, 0, 0);
+  text-shadow: 3px 3px 8px #33333395;
 }
 
 .services .services-body {
@@ -41,9 +41,9 @@
 }
 
 .services .services-body .services-content .top img {
-  width: 50%;
+  width: 40%;
   height: 295px;
-  object-fit: contain;
+  object-fit: cover;
   background-color: #fff;
   border-radius: 15px;
   padding: 0.5rem 1.5rem;
