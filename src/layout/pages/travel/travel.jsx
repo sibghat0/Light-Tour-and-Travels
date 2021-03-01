@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./travel.css";
+import firebase from "firebase";
 
 import car1 from "../../../assets/car1.png";
 import car2 from "../../../assets/car2.jpg";
@@ -18,7 +19,11 @@ export default class TravelMe extends Component {
             "Web development is the work involved in developing a website for the internet or a intranet.web development can range from developing a simple static page of plain text to complex web-based applications , e-business and social network services.Web development is a wider concept it includes web engineering a web design web content development, web server, etc.",
           ol: [
             {
-              ol: "sibghat",
+              olh: "sibghat",
+              img: car2,
+            },
+            {
+              olh: "sib",
               img: car2,
             },
           ],
@@ -26,6 +31,26 @@ export default class TravelMe extends Component {
       ],
     };
   }
+
+  // componentDidMount() {
+  //   firebase
+  //     .firestore()
+  //     .collection("tour")
+  //     .get()
+  //     .then((snap) => {
+  //       var temp = [];
+  //       var val = [];
+  //       snap.forEach((doc) => {
+  //         const data = doc.data();
+  //         temp.push(data);
+  //         val.push(data);
+  //       });
+  //       this.setState({
+  //         data: temp,
+  //         ol: val,
+  //       });
+  //     });
+  // }
 
   render() {
     return (
@@ -49,19 +74,11 @@ export default class TravelMe extends Component {
                     return (
                       <div className="other">
                         <div className="section">
-                          <h4>{i.ol}</h4>
+                          <h4>{i.olh}</h4>
                           <img src={i.img} alt="img" />
                         </div>
                         <div className="section">
-                          <h4>{i.ol}</h4>
-                          <img src={i.img} alt="img" />
-                        </div>
-                        <div className="section">
-                          <h4>{i.ol}</h4>
-                          <img src={i.img} alt="img" />
-                        </div>
-                        <div className="section">
-                          <h4>{i.ol}</h4>
+                          <h4>{i.olh}</h4>
                           <img src={i.img} alt="img" />
                         </div>
                       </div>
