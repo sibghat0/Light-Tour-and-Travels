@@ -31,7 +31,8 @@
   display: flex;
 }
 
-.navbar .nav a {
+.navbar .nav a,
+.navbar .nav p {
   margin-right: 40px;
   font-weight: 500;
   color: #fff;
@@ -41,11 +42,13 @@
   align-items: center;
 }
 
-.navbar.white .nav a {
+.navbar.white .nav a,
+.navbar.white .nav p {
   color: #333;
 }
 
-.navbar .nav a::after {
+.navbar .nav a::after,
+.navbar .nav p::after {
   content: "";
   position: absolute;
   bottom: 14px;
@@ -58,11 +61,13 @@
   transition: transform 0.3s ease;
 }
 
-.navbar.white .nav a::after {
+.navbar.white .nav a::after,
+.navbar.white .nav p::after {
   background-color: #333;
 }
 
-.navbar .nav a:hover::after {
+.navbar .nav a:hover::after,
+.navbar .nav p:hover::after {
   transform: scaleX(1);
   transition: transform 0.3s ease;
 }

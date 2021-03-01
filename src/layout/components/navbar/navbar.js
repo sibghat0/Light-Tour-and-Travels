@@ -13,7 +13,7 @@ export default class Navbar extends Component {
 
   componentDidMount() {
     window.onscroll = () => {
-      if (window.pageYOffset >= 400) {
+      if (window.pageYOffset >= 200) {
         this.setState({
           whiteNavbar: true,
         });
@@ -34,7 +34,7 @@ export default class Navbar extends Component {
           <a href="/vehicles">Vehicles</a>
           <a href="/gallery">Gallery</a>
           <a href="/travel">Travels</a>
-          <a href="/contact">Contact</a>
+          <p onClick={this.props.handleContact}>Contact</p>
         </div>
         <div
           className="hamburgerLines"

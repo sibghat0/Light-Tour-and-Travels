@@ -40,7 +40,7 @@
   font-size: 40px;
   color: #fff;
   margin: 40px 0;
-  text-shadow: 5px 5px 15px rgb(0, 0, 0);
+  text-shadow: 3px 3px 8px #33333395;
 }
 
 .services .services-body {
@@ -60,8 +60,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 5px 5px 15px rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   margin-top: 20px;
 }
 
@@ -70,12 +71,13 @@
 }
 
 .services .services-body .services-content .top img {
-  width: 50%;
+  width: 40%;
   height: 295px;
-  object-fit: contain;
+  object-fit: cover;
   background-color: #fff;
   border-radius: 15px;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
+  /* border-radius: 10px; */
 }
 
 .services .services-body .services-content .top .content {
