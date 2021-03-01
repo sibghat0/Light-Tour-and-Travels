@@ -53,6 +53,13 @@
   align-items: center;
 }
 
+/* .gallery .respo a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .gallery .gallery-cont {
   width: 100%;
   display: flex;

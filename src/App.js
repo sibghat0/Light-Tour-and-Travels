@@ -18,11 +18,11 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/vehicles" component={Cars} />
-        <Route exact path="/travel" component={TravelMe} />
+        <Route exact path="/travel/:id" component={TravelMe} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/gallery/:id" component={GalleryIn} />
         <Route exact path="/gallery" component={Gallery} />
-        <Route exact path="/travel/:id" component={Tour} />
+        <Route exact path="/travel" component={Tour} />
       </Switch>
       {/* <Footer /> */}
     </div>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import "./cars.css";
 
 import car1 from "../../../assets/car1.png";

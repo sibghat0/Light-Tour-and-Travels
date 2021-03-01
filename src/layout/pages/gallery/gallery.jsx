@@ -27,6 +27,22 @@ export default class Gallery extends Component {
       });
   }
 
+  // componentDidMount() {
+  //   firebase
+  //     .firestore()
+  //     .collection("gallery")
+  //     .onSnapshot((snap) => {
+  //       snap.docChanges().forEach((doc) => {
+  //         const data = doc.doc.data();
+  //         data.id = doc.doc.id;
+  //         // temp.push(data);
+  //         this.setState({
+  //           data: [...this.state.data, data],
+  //         });
+  //       });
+  //     });
+  // }
+
   render() {
     return (
       <div className="gallery">
@@ -40,42 +56,6 @@ export default class Gallery extends Component {
           {this.state.data.map((i) => {
             return (
               <div className="gallery-cont">
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
                 <div className="gallery-show">
                   <img src={i.img} alt="" />
                   <div className="content">

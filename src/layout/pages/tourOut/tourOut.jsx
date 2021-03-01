@@ -47,48 +47,6 @@ export default class Tour extends Component {
                     <p>{i.Name}</p>
                   </div>
                 </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
-                <div className="gallery-show">
-                  <img src={i.Image} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
-                  </div>
-                </div>
               </div>
             );
           })}
