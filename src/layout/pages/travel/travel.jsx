@@ -53,7 +53,7 @@ export default class TravelMe extends Component {
             return (
               <>
                 <div className="image">
-                  <img src={item.img} alt="img" />
+                  <img src={item.Image} alt="img" />
                 </div>
 
                 <div className="sec-cont">
@@ -62,7 +62,7 @@ export default class TravelMe extends Component {
                     <p>{item.Para}</p>
                   </div>
                   <div className="car-des">
-                    <h4>HIGHLIGHT</h4>
+                    <h4>TOURIST ATTRACTIONS</h4>
                     {item.ol.map((i) => {
                       console.log(i);
                       return (

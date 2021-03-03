@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import manali from "../../../assets/manali1.JPG";
 import "./tourOut.css";
 import firebase from "firebase";
 
