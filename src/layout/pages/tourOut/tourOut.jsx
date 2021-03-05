@@ -37,18 +37,18 @@ export default class Tour extends Component {
           </a> */}
         </div>
         <div className="respo">
-          {this.state.data.map((i) => {
-            return (
-              <div className="gallery-cont">
+          <div className="gallery-cont">
+            {this.state.data.map((i) => {
+              return (
                 <div className="gallery-show">
                   <img src={i.Image} alt="" />
                   <div className="content">
                     <p>{i.Name}</p>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     );

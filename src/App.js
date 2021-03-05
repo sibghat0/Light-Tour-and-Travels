@@ -35,7 +35,7 @@ function App() {
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/travel" component={Tour} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
       {contact ? <Contact close={() => setContact(false)} /> : null}
     </div>
   );
