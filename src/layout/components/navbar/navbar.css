@@ -29,10 +29,11 @@
 .navbar .nav {
   height: 100%;
   display: flex;
+  align-items: center;
 }
 
 .navbar .nav a,
-.navbar .nav p {
+.navbar .nav p.contactButton {
   margin-right: 40px;
   font-weight: 500;
   color: #fff;
@@ -43,12 +44,58 @@
 }
 
 .navbar.white .nav a,
-.navbar.white .nav p {
+.navbar.white .nav p.contactButton {
   color: #333;
 }
 
+.navbar .nav button {
+  padding: 10px 20px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0ac0e;
+  background-image: linear-gradient(90deg, #f0ac0e, #f56616);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 3px 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.navbar .nav button p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transform: translateX(7px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.navbar .nav button:hover p {
+  transform: translateX(-10px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.navbar .nav button i {
+  color: #fff;
+  font-size: 16px;
+  transform: translateX(80px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.navbar .nav button:hover i {
+  transform: translateX(8px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.navbar .nav button:active {
+  box-shadow: inset 3px 5px 15px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.3);
+}
+
 .navbar .nav a::after,
-.navbar .nav p::after {
+.navbar .nav p.contactButton::after {
   content: "";
   position: absolute;
   bottom: 14px;
@@ -62,14 +109,48 @@
 }
 
 .navbar.white .nav a::after,
-.navbar.white .nav p::after {
+.navbar.white .nav p.contactButton::after {
   background-color: #333;
 }
 
 .navbar .nav a:hover::after,
-.navbar .nav p:hover::after {
+.navbar .nav p.contactButton:hover::after {
   transform: scaleX(1);
   transition: transform 0.3s ease;
+}
+
+.modal {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 30px 40px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.modal h3 {
+  color: #000;
+  font-weight: 500;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.modal .inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal .inputs .input {
+  margin-bottom: 15px;
 }
 
 .navbar .hamburgerLines {

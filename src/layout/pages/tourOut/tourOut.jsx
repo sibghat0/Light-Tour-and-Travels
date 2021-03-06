@@ -40,12 +40,12 @@ export default class Tour extends Component {
           <div className="gallery-cont">
             {this.state.data.map((i) => {
               return (
-                <div className="gallery-show">
+                <a href="/travel/123" className="gallery-show">
                   <img src={i.Image} alt="" />
                   <div className="content">
                     <p>{i.Name}</p>
                   </div>
-                </div>
+                </a>
               );
             })}
           </div>
