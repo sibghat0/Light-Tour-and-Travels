@@ -53,18 +53,20 @@ export default class Gallery extends Component {
           </a>
         </div>
         <div className="respo">
-          {this.state.data.map((i) => {
-            return (
-              <a href="/gallery/123" className="gallery-cont">
-                <div className="gallery-show">
-                  <img src={i.img} alt="" />
-                  <div className="content">
-                    <p>{i.Name}</p>
+          <div className="gallery-cont">
+            {this.state.data.map((i) => {
+              return (
+                <a href="/gallery/123" className="gallery-cont">
+                  <div className="gallery-show">
+                    <img src={i.img} alt="" />
+                    <div className="content">
+                      <p>{i.Name}</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            );
-          })}
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
