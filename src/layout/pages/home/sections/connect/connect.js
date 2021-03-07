@@ -7,8 +7,8 @@ export default class Connect extends Component {
       <div className="connect">
         <h2>CONNECT WITH US</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quasi
-          asperiores numquam minima autem beatae?
+          We fullfill the dream you desire, you are just a click away to make
+          your dream come true.
         </p>
         <a href="/contact">
           <button type="button">Click Here</button>
