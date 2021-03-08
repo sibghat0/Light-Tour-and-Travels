@@ -1,7 +1,7 @@
 .contact-back {
   width: 100%;
   height: 100%;
-  filter: blur(95%);
+  /* filter: blur(95%); */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,17 +11,18 @@
   right: 0;
   z-index: 999;
   backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .contact-back .contact {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   padding: 1rem 1.5rem;
   border-radius: 10px;
   position: relative;
-  border: 1px solid lightgrey;
+  border: 1px solid #fff;
 }
 
 .contact-back .contact i {
@@ -40,12 +41,12 @@
 }
 
 .contact-back .contact .contact-head .left {
-  height: 30px;
+  height: 60px;
   margin-right: 4rem;
 }
 
 .contact-back .contact .contact-head .left img {
-  height: 200%;
+  height: 100%;
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
@@ -90,18 +91,12 @@
   margin-bottom: 20px;
 }
 
-.contact-back .contact .contact-body .form-group input {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  outline: none;
-  border: 1px solid grey;
-  padding: 0 1rem;
-  transition: border 0.2s;
+.contact-back .contact .contact-body .form-group .input {
   background-color: #fff;
+  /* overflow: hidden; */
 }
 
-.contact-back .contact .contact-body .form-group input:focus {
+/* .contact-back .contact .contact-body .form-group input:focus {
   border: 1px solid orangered;
   transition: border 0.2s;
 }
@@ -113,7 +108,7 @@
   font-weight: 500;
   transition: all 0.3s;
   /* color: #fff; */
-  /* background-color: rgba(255, 255, 255, 0s.2); */
+/* background-color: rgba(255, 255, 255, 0s.2); 
 }
 
 input::-webkit-outer-spin-button,
@@ -122,12 +117,12 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
+/* Firefox 
 input[type="number"] {
   -moz-appearance: textfield;
-}
+} */
 
-.contact-back .contact .contact-body .form-group label {
+/* .contact-back .contact .contact-body .form-group label {
   position: absolute;
   top: 50%;
   transform: translateY(-55%);
@@ -141,7 +136,7 @@ input[type="number"] {
   left: 0.7rem;
   font-size: 12px;
   font-weight: 500;
-}
+} */
 
 .contact-back .contact .contact-body .twoFields {
   display: flex;

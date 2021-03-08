@@ -6,8 +6,8 @@ export default class LocationCard extends Component {
   render() {
     return (
       <div className="locationCard">
-        <img src={background} alt="" />
-        <h3>Howrah Bridge</h3>
+        <img src={this.props.background} alt="" />
+        <h3>{this.props.name}</h3>
       </div>
     );
   }

@@ -18,11 +18,16 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.navbar img {
+.navbar .logo {
   height: 80%;
 }
 
-.navbar.white img {
+.navbar .logo img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar.white .logo img {
   filter: invert(95%);
 }
 
@@ -41,6 +46,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .navbar.white .nav a,
@@ -48,7 +54,7 @@
   color: #333;
 }
 
-.navbar .nav button {
+.navbar button.makePayment {
   padding: 10px 20px;
   height: 45px;
   display: flex;
@@ -64,32 +70,33 @@
   box-shadow: inset 3px 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-.navbar .nav button p {
+.navbar button.makePayment p {
   color: white;
   font-size: 16px;
   font-weight: 500;
+  margin: 0;
   transform: translateX(7px);
   transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
 
-.navbar .nav button:hover p {
+.navbar button.makePayment:hover p {
   transform: translateX(-10px);
   transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
 
-.navbar .nav button i {
+.navbar button.makePayment i {
   color: #fff;
   font-size: 16px;
   transform: translateX(80px);
   transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
 
-.navbar .nav button:hover i {
+.navbar button.makePayment:hover i {
   transform: translateX(8px);
   transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
 
-.navbar .nav button:active {
+.navbar button.makePayment:active {
   box-shadow: inset 3px 5px 15px rgba(0, 0, 0, 0.3),
     inset -5px -5px 15px rgba(255, 255, 255, 0.3);
 }
@@ -181,14 +188,16 @@
   backdrop-filter: blur(10px);
 }
 
-.navbar .hamburger a {
+.navbar .hamburger a,
+.navbar .hamburger p {
   font-size: 25px;
   color: #fff;
   font-weight: 500;
   margin-bottom: 40px;
 }
 
-.navbar .hamburger a i {
+.navbar .hamburger a i,
+.navbar .hamburger p i {
   margin-right: 15px;
 }
 
@@ -225,6 +234,15 @@
 
   .navbar .hamburgerLines .line {
     background-color: #333;
+  }
+
+  .navbar .hamburger button.makePayment {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .navbar .hamburger button.makePayment p {
+    font-size: 22px;
   }
 }
 

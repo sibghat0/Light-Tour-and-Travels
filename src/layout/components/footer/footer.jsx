@@ -54,14 +54,15 @@ export default class Footer extends Component {
             </div>
             <div className="nav-links contact">
               <h4>Contact</h4>
-              <a href="tel:+917044804030">
-                <i className="fas fa-phone-alt"></i>+91 70448 04030
+              <a href="tel:9874580777">
+                <i className="fas fa-phone-alt"></i>+91 9874580777
               </a>
-              <a href="tel:+917044804030">
-                <i className="fas fa-phone-alt"></i>+91 70448 04030
+              <a href="tel:9339739777">
+                <i className="fas fa-phone-alt"></i>+91 9339739777
               </a>
-              <a href="mailto:anasalam027@gmail.com">
-                <i className="fas fa-envelope"></i>Example@gmail.com
+              <a href="mailto:mdzahid@lighttourandtravels.com">
+                <i className="fas fa-envelope"></i>
+                mdzahid@lighttourandtravels.com
               </a>
             </div>
           </div>

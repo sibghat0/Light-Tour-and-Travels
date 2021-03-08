@@ -77,6 +77,14 @@
   justify-content: center;
 }
 
+.tour .cards .slick-dots li.slick-active button::before {
+  color: #f56f1a;
+}
+
+.tour .cards .slick-dots li button:hover:before {
+  color: #f56f1a;
+}
+
 @media (max-width: 1024px) {
   .tour {
     padding: 50px;

@@ -10,9 +10,9 @@ export default class Connect extends Component {
           We fullfill the dream you desire, you are just a click away to make
           your dream come true.
         </p>
-        <a href="/contact">
-          <button type="button">Click Here</button>
-        </a>
+        <button type="button" onClick={this.props.handleContact}>
+          Click Here
+        </button>
       </div>
     );
   }

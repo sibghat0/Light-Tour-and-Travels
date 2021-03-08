@@ -31,9 +31,16 @@
 
 .toursWeProvide .cards .card .top img {
   width: 100%;
-  object-fit: contain;
+  height: 164px;
+  object-fit: cover;
+  object-position: bottom;
+  /* background-position: bottom; */
   border-radius: 10px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
+}
+
+.toursWeProvide .cards .card:first-child .top img {
+  object-position: 0 -60px;
 }
 
 .toursWeProvide .cards .card .bottom h4 {
@@ -44,7 +51,7 @@
 
 .toursWeProvide .cards .card .bottom p {
   line-height: 30px;
-  text-align: center;
+  text-align: justify;
 }
 
 @media (max-width: 1024px) {
@@ -80,6 +87,14 @@
 
   .toursWeProvide h2 {
     padding: 0;
+  }
+
+  .toursWeProvide .cards {
+    justify-content: center;
+  }
+
+  .toursWeProvide .cards .card:first-child .top img {
+    object-position: bottom;
   }
 }
 

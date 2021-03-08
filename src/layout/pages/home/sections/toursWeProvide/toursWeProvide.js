@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./toursWeProvide.css";
-import image from "../../../../../assets/tourCard.png";
-import image1 from "../../../../../assets/tourCard2.png";
-import image2 from "../../../../../assets/tourCard3.png";
+import kolkataTour from "../../../../../assets/kolkataTour.jpg";
+import darjeelingTour from "../../../../../assets/darjeelingTour.jpg";
+import sundarbanTour from "../../../../../assets/sundarbanTour.png";
 
 export default class ToursWeProvide extends Component {
   render() {
@@ -12,43 +12,43 @@ export default class ToursWeProvide extends Component {
         <div className="cards">
           <div className="card">
             <div className="top">
-              <img src={image} alt="" />
+              <img src={kolkataTour} alt="" />
             </div>
             <div className="bottom">
               <h4>KOLKATA TOUR</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad
+                Kolkata, India's second biggest city, is a perpetually ongoing
+                festival of human existence, concurrently luxurious and squalid,
+                refined and frantic, pointedly futuristic, while beautifully in
+                decay.
               </p>
             </div>
           </div>
           <div className="card">
             <div className="top">
-              <img src={image1} alt="" />
+              <img src={darjeelingTour} alt="" />
             </div>
             <div className="bottom">
-              <h4>KOLKATA TOUR</h4>
+              <h4>DARJEELING TOUR</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad
+                Darjeeling hill town is located at an altitude of 6,710ft in
+                north east India and is part of the state of West Bengal. The
+                nearest airport is Bagdogra and the nearest major railway
+                junction is New Jalpaiguri (NJP).
               </p>
             </div>
           </div>
           <div className="card">
             <div className="top">
-              <img src={image2} alt="" />
+              <img src={sundarbanTour} alt="" />
             </div>
             <div className="bottom">
-              <h4>KOLKATA TOUR</h4>
+              <h4>SUNDARBAN TOUR</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad
+                The Sundarbans a UNESCO World Heritage Site is located at the
+                South eastern tip of the 24 Paraganas district about 110 km from
+                Kolkata. It got its name from one of the mangrove plants known
+                as Sundari.
               </p>
             </div>
           </div>

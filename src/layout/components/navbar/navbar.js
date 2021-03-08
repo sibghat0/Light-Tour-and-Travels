@@ -136,7 +136,9 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className={this.state.whiteNavbar ? "navbar white" : "navbar"}>
-        <img src={logo} alt="" />
+        <a href="/" className="logo">
+          <img src={logo} alt="" />
+        </a>
         <div className="nav">
           <a href="/">Home</a>
           <a href="/vehicles">Vehicles</a>
@@ -145,7 +147,11 @@ export default class Navbar extends Component {
           <p className="contactButton" onClick={this.props.handleContact}>
             Contact
           </p>
-          <button type="button" onClick={() => this.setState({ modal: true })}>
+          <button
+            type="button"
+            className="makePayment"
+            onClick={() => this.setState({ modal: true })}
+          >
             <p>Make a payment</p>
             <i className="fas fa-credit-card"></i>
           </button>
@@ -282,15 +288,27 @@ export default class Navbar extends Component {
           <a href="/gallery">
             <i className="fas fa-images"></i>Gallery
           </a>
-          <a href="/tour">
-            <i className="fas fa-route"></i>Tour
-          </a>
           <a href="/travel">
-            <i className="fas fa-bus"></i>Travels
+            <i className="fas fa-route"></i>Travels
           </a>
-          <a href="/contact">
+          <p
+            onClick={() => {
+              this.props.handleContact();
+              this.setState({
+                hamburger: false,
+              });
+            }}
+          >
             <i className="fas fa-address-book"></i>Contact
-          </a>
+          </p>
+          <button
+            type="button"
+            className="makePayment"
+            onClick={() => this.setState({ modal: true, hamburger: false })}
+          >
+            <p>Make a payment</p>
+            <i className="fas fa-credit-card"></i>
+          </button>
         </div>
       </div>
     );

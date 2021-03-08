@@ -6,7 +6,7 @@ import Home from "./layout/pages/home/home";
 import Footer from "./layout/components/footer/footer";
 import Cars from "./layout/pages/cars/cars";
 import TravelMe from "./layout/pages/travel/travel";
-import Contact from "./layout/pages/contact/contact";
+import Contact from "./layout/components/contact/contact";
 import GalleryIn from "./layout/pages/galleryIn/galleryIn";
 import Gallery from "./layout/pages/gallery/gallery";
 import Tour from "./layout/pages/tourOut/tourOut";
@@ -28,7 +28,18 @@ function App() {
         }}
       />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route
+          exact
+          path="/"
+          render={(props) => (
+            <Home
+              handleContact={() => {
+                setContact(true);
+              }}
+              {...props}
+            />
+          )}
+        />
         <Route exact path="/vehicles" component={Cars} />
         <Route exact path="/travel/:id" component={TravelMe} />
         <Route exact path="/gallery/:id" component={GalleryIn} />

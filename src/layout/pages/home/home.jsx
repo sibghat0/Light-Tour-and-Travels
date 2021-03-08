@@ -15,7 +15,7 @@ export default class Home extends Component {
         <Tour />
         <Map />
         <AboutTour />
-        <Connect />
+        <Connect handleContact={this.props.handleContact} />
         <ToursWeProvide />
       </div>
     );

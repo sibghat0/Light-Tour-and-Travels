@@ -20,7 +20,7 @@ export default class Map extends Component {
             <li>Maharashtra</li>
             <li>Tamil Nadu</li>
             <li>Rajasthan</li>
-            <li>Gujrat</li>
+            <li>Gujraat</li>
             <li>Jharkhand</li>
           </ul>
         </div>

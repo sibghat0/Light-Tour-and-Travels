@@ -6,8 +6,9 @@
 
 .locationCard img {
   width: 100%;
+  height: 100%;
   border-radius: 20px;
-  object-fit: contain;
+  object-fit: cover;
   filter: brightness(75%);
 }
 

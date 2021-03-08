@@ -3,6 +3,7 @@ import "./contact.css";
 import logo from "../../../assets/logo.png";
 import indianCities from "indian-states-cities";
 import axios from "axios";
+import { TextField } from "@material-ui/core";
 // import toaster from "toasted-notes";
 // import "toasted-notes/src/styles.css";
 
@@ -103,7 +104,7 @@ export default class Contact extends Component {
 
           <div className="contact-body">
             <div className="form-group">
-              <input
+              {/* <input
                 type="text"
                 id="name"
                 name="name"
@@ -115,10 +116,21 @@ export default class Contact extends Component {
                 htmlFor="name"
               >
                 Full Name
-              </label>
+              </label> */}
+              <TextField
+                type="text"
+                variant="outlined"
+                fullWidth
+                label="First Name"
+                size="small"
+                name="name"
+                className="input"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
             </div>
             <div className="form-group">
-              <input
+              {/* <input
                 type="email"
                 id="email"
                 name="email"
@@ -130,10 +142,21 @@ export default class Contact extends Component {
                 htmlFor="email"
               >
                 Email
-              </label>
+              </label> */}
+              <TextField
+                type="text"
+                variant="outlined"
+                fullWidth
+                label="Email"
+                size="small"
+                name="email"
+                className="input"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
             </div>
             <div className="form-group">
-              <input
+              {/* <input
                 type="number"
                 id="number"
                 name="number"
@@ -145,7 +168,18 @@ export default class Contact extends Component {
                 htmlFor="number"
               >
                 Phone Number
-              </label>
+              </label> */}
+              <TextField
+                type="text"
+                variant="outlined"
+                fullWidth
+                label="Phone Number"
+                size="small"
+                name="number"
+                className="input"
+                value={this.state.number}
+                onChange={this.handleChange}
+              />
             </div>
             <div className="twoFields">
               <select
@@ -176,7 +210,7 @@ export default class Contact extends Component {
               </select>
             </div>
             <div className="form-group">
-              <input
+              {/* <input
                 type="number"
                 id="pincode"
                 name="pincode"
@@ -188,7 +222,18 @@ export default class Contact extends Component {
                 htmlFor="pincode"
               >
                 Pincode
-              </label>
+              </label> */}
+              <TextField
+                type="text"
+                variant="outlined"
+                fullWidth
+                label="Pincode"
+                size="small"
+                name="pincode"
+                className="input"
+                value={this.state.pincode}
+                onChange={this.handleChange}
+              />
             </div>
 
             <div className="contact-footer">
