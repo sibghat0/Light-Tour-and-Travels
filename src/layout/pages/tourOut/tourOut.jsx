@@ -11,18 +11,19 @@ export default class Tour extends Component {
   }
 
   componentDidMount() {
+    var data = [];
     firebase
       .firestore()
       .collection("tour")
-      .get()
-      .then((snap) => {
-        var temp = [];
-        snap.forEach((doc) => {
-          const data = doc.data();
-          temp.push(data);
+      .onSnapshot((snap) => {
+        snap.docChanges().forEach((changes) => {
+          var item = {};
+          item.data = changes.doc.data();
+          item.id = changes.doc.id;
+          data.push(item);
         });
         this.setState({
-          data: temp,
+          data: data,
         });
       });
   }
@@ -32,18 +33,15 @@ export default class Tour extends Component {
       <div className="gallery-out">
         <div className="heading">
           <h4>TOUR</h4>
-          {/* <a href="">
-            <i className="far fa-star"></i> Starred
-          </a> */}
         </div>
         <div className="respo">
           <div className="gallery-cont">
-            {this.state.data.map((i) => {
+            {this.state.data.map((item) => {
               return (
-                <a href="/travel/123" className="gallery-show">
-                  <img src={i.Image} alt="" />
+                <a href={`/travel/${item.id}`} className="gallery-show">
+                  <img src={item.data.Image} alt="" />
                   <div className="content">
-                    <p>{i.Name}</p>
+                    <p>{item.data.Name}</p>
                   </div>
                 </a>
               );
