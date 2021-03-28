@@ -32,10 +32,9 @@ export default class TravelMe extends Component {
     firebase
       .firestore()
       .collection("tour")
-      .get()
-      .then((snap) => {
-        snap.forEach((doc) => {
-          data.push(doc.data());
+      .onSnapshot((snap) => {
+        snap.docChanges().forEach((changes) => {
+          data.push(changes.doc.data());
         });
         this.setState({
           data: data,
@@ -44,44 +43,39 @@ export default class TravelMe extends Component {
   }
 
   render() {
-    // console.log( && this.state.data.map);
     return (
-      <>
-        {/* <h4>First Slider</h4> */}
-        {this.state.data &&
-          this.state.data.map((item) => {
-            return (
-              <>
-                <div className="cars-cont">
-                  <div className="image">
-                    <img src={item.Image} alt="img" />
-                  </div>
+      <div>
+        {this.state.data.map((item) => {
+          return (
+            <div className="cars-cont">
+              <div className="image">
+                <img src={item.Image} alt="img" />
+              </div>
 
-                  <div className="sec-cont">
-                    <div className="car-des">
-                      <h4>{item.Heading}</h4>
-                      <p>{item.Para}</p>
-                    </div>
-                    <div className="car-des">
-                      <h4>TOURIST ATTRACTIONS</h4>
-                      {item.ol.map((i) => {
-                        console.log(i);
-                        return (
-                          <div className="other">
-                            <div className="section">
-                              <h4>{i.olh}</h4>
-                              <img src={i.img} alt="img" />
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
+              <div className="sec-cont">
+                <div className="car-des">
+                  <h4>{item.Heading}</h4>
+                  <p>{item.Para}</p>
                 </div>
-              </>
-            );
-          })}
-      </>
+                <div className="car-des">
+                  <h4>TOURIST ATTRACTIONS</h4>
+                  {item.ol.map((i) => {
+                    console.log(i);
+                    return (
+                      <div className="other">
+                        <div className="section">
+                          <h4>{i.olh}</h4>
+                          <img src={i.img} alt="img" />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }

@@ -4,8 +4,8 @@ import logo from "../../../assets/logo.png";
 import indianCities from "indian-states-cities";
 import axios from "axios";
 import { TextField } from "@material-ui/core";
-// import toaster from "toasted-notes";
-// import "toasted-notes/src/styles.css";
+import toaster from "toasted-notes";
+import "toasted-notes/src/styles.css";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -43,38 +43,41 @@ export default class Contact extends Component {
     );
   };
 
-  // handleSendEmail = async () => {
-  //   if (
-  //     this.state.name.length > 0 &&
-  //     this.state.email.length > 0 &&
-  //     this.state.number.length > 0 &&
-  //     this.state.city.length > 0 &&
-  //     this.state.state.length > 0 &&
-  //     this.state.pincode.length > 0
-  //   ) {
-  //     var data = {
-  //       name: this.state.name,
-  //       email: this.state.email,
-  //       phone: this.state.number,
-  //       city: this.state.city,
-  //       state: this.state.state,
-  //       pincode: this.state.pincode,
-  //     };
-  //     var res = await axios.post("/api/sendContactDetails/", data);
-  //     if (res.data === "Success") {
-  //       toaster.notify(
-  //         "We have recieved your details and will contact you soon..."
-  //       );
-  //       this.props.close();
-  //     } else {
-  //       toaster.notify(
-  //         "There's some error, Please try again later or call us !"
-  //       );
-  //     }
-  //   } else {
-  //     toaster.notify("We can't contact you if there's any empty field left ! ");
-  //   }
-  // };
+  handleSendEmail = async () => {
+    if (
+      this.state.name.length > 0 &&
+      this.state.email.length > 0 &&
+      this.state.number.length > 0 &&
+      this.state.city.length > 0 &&
+      this.state.state.length > 0 &&
+      this.state.pincode.length > 0
+    ) {
+      var data = {
+        name: this.state.name,
+        email: this.state.email,
+        phone: this.state.number,
+        city: this.state.city,
+        state: this.state.state,
+        pincode: this.state.pincode,
+      };
+      var res = await axios.post(
+        "https://lighttourandtravels.herokuapp.com/sendContactDetails",
+        data
+      );
+      if (res.data === "Success") {
+        toaster.notify(
+          "We have recieved your details and will contact you soon..."
+        );
+        this.props.close();
+      } else {
+        toaster.notify(
+          "There's some error, Please try again later or call us !"
+        );
+      }
+    } else {
+      toaster.notify("We can't contact you if there's any empty field left ! ");
+    }
+  };
 
   render() {
     return (
