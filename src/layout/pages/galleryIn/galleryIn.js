@@ -19,13 +19,13 @@ export default class GalleryIn extends Component {
     firebase
       .firestore()
       .collection("gallery")
-      .doc("U1tmSHYcBU4UZjLo5eYe")
+      .doc(this.props.match.params.id)
       .get()
       .then((doc) => {
         this.setState({
           images: doc.data().images,
           star: starred
-            ? starred.includes("U1tmSHYcBU4UZjLo5eYe")
+            ? starred.includes(this.props.match.params.id)
               ? true
               : false
             : false,

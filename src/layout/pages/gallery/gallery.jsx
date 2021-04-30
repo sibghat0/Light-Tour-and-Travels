@@ -19,6 +19,7 @@ export default class Gallery extends Component {
         var temp = [];
         snap.forEach((doc) => {
           const data = doc.data();
+          data.id = doc.id;
           temp.push(data);
         });
         this.setState({
@@ -26,22 +27,6 @@ export default class Gallery extends Component {
         });
       });
   }
-
-  // componentDidMount() {
-  //   firebase
-  //     .firestore()
-  //     .collection("gallery")
-  //     .onSnapshot((snap) => {
-  //       snap.docChanges().forEach((doc) => {
-  //         const data = doc.doc.data();
-  //         data.id = doc.doc.id;
-  //         // temp.push(data);
-  //         this.setState({
-  //           data: [...this.state.data, data],
-  //         });
-  //       });
-  //     });
-  // }
 
   render() {
     return (
@@ -56,7 +41,7 @@ export default class Gallery extends Component {
           <div className="gallery-cont">
             {this.state.data.map((i) => {
               return (
-                <a href="/gallery/123" className="gallery-cont">
+                <a href={`/gallery/${i.id}`} className="gallery-cont">
                   <div className="gallery-show">
                     <img src={i.img} alt="" />
                     <div className="content">
