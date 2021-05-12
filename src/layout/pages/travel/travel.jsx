@@ -33,7 +33,7 @@ export default class TravelMe extends Component {
         {this.state.loading ? (
           <Loader />
         ) : (
-          <Loader>
+          <>
             <div className="image">
               <img src={this.state.data.Image} alt="img" />
             </div>
@@ -57,7 +57,7 @@ export default class TravelMe extends Component {
                 })}
               </div>
             </div>
-          </Loader>
+          </>
         )}
       </div>
     );
