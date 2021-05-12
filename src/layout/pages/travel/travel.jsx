@@ -3,6 +3,7 @@ import "./travel.css";
 import firebase from "firebase";
 import Lottie from "react-lottie";
 import loader from "../../../loader/lf30_editor_v1fleg6c.json";
+import Loader from "../../components/loader/loader";
 
 export default class TravelMe extends Component {
   constructor(props) {
@@ -30,13 +31,9 @@ export default class TravelMe extends Component {
     return (
       <div className="cars-cont">
         {this.state.loading ? (
-          <Lottie
-            options={{ animationData: loader }}
-            height={400}
-            width={400}
-          />
+          <Loader />
         ) : (
-          <>
+          <Loader>
             <div className="image">
               <img src={this.state.data.Image} alt="img" />
             </div>
@@ -60,7 +57,7 @@ export default class TravelMe extends Component {
                 })}
               </div>
             </div>
-          </>
+          </Loader>
         )}
       </div>
     );

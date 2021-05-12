@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./tourOut.css";
 import firebase from "firebase";
-import Lottie from "react-lottie";
-import loader from "../../../loader/9921-loader.json";
+import Loader from "../../components/loader/loader";
 
 export default class Tour extends Component {
   constructor() {
@@ -36,11 +35,7 @@ export default class Tour extends Component {
     return (
       <>
         {this.state.loading ? (
-          <Lottie
-            options={{ animationData: loader }}
-            height={400}
-            width={400}
-          />
+          <Loader />
         ) : (
           <div className="gallery-out">
             <div className="heading">

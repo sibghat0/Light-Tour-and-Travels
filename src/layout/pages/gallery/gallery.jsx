@@ -3,6 +3,7 @@ import "./gallery.css";
 import firebase from "firebase";
 import Lottie from "react-lottie";
 import loader from "../../../loader/9921-loader.json";
+import Loader from "../../components/loader/loader";
 
 export default class Gallery extends Component {
   constructor() {
@@ -36,11 +37,7 @@ export default class Gallery extends Component {
     return (
       <>
         {this.state.loading ? (
-          <Lottie
-            options={{ animationData: loader }}
-            height={400}
-            width={400}
-          />
+          <Loader />
         ) : (
           <div className="gallery">
             <div className="heading">

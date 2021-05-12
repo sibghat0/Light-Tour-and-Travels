@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./galleryIn.css";
 import firebase from "firebase";
 import Slider from "react-slick";
+import Loader from "../../components/loader/loader";
 
 export default class GalleryIn extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class GalleryIn extends Component {
       images: [],
       slider: false,
       currentIndex: 0,
+      loading: true,
     };
   }
 
@@ -29,6 +31,7 @@ export default class GalleryIn extends Component {
               ? true
               : false
             : false,
+          loading: false,
         });
       });
   }
@@ -65,66 +68,73 @@ export default class GalleryIn extends Component {
     };
     return (
       <div className="galleryIn">
-        <div className="heading">
-          <h4>Kolkata City Tour</h4>
-          <i
-            className={
-              this.state.star
-                ? "fas fa-star golden-star"
-                : "fas fa-star grey-star"
-            }
-            onClick={this.handleStar}
-          ></i>
-        </div>
-        <div className="body">
-          {this.state.images.map((image, index) => {
-            return (
-              <div
-                onClick={() => {
-                  this.setState(
-                    {
-                      currentIndex: index,
-                      slider: true,
-                    },
-                    () => this.slider.slickGoTo(this.state.currentIndex)
-                  );
-
-                  document.getElementsByTagName("body")[0].style.overflow =
-                    "hidden";
-                }}
-                key={index}
-              >
-                <img src={image} alt="" />
-              </div>
-            );
-          })}
-        </div>
-        {this.state.slider ? (
-          <div className="slider">
-            <i
-              className="fas fa-times"
-              onClick={() =>
-                this.setState(
-                  {
-                    slider: false,
-                  },
-                  () =>
-                    (document.getElementsByTagName("body")[0].style.overflow =
-                      "auto")
-                )
-              }
-            ></i>
-            <Slider ref={(slider) => (this.slider = slider)} {...settings}>
+        {this.state.loading ? (
+          <Loader />
+        ) : (
+          <>
+            <div className="heading">
+              <h4>Kolkata City Tour</h4>
+              <i
+                className={
+                  this.state.star
+                    ? "fas fa-star golden-star"
+                    : "fas fa-star grey-star"
+                }
+                onClick={this.handleStar}
+              ></i>
+            </div>
+            <div className="body">
               {this.state.images.map((image, index) => {
                 return (
-                  <div className="sliderImage" key={index}>
-                    <img src={image} alt="" />;
+                  <div
+                    onClick={() => {
+                      this.setState(
+                        {
+                          currentIndex: index,
+                          slider: true,
+                        },
+                        () => this.slider.slickGoTo(this.state.currentIndex)
+                      );
+
+                      document.getElementsByTagName("body")[0].style.overflow =
+                        "hidden";
+                    }}
+                    key={index}
+                  >
+                    <img src={image} alt="" />
                   </div>
                 );
               })}
-            </Slider>
-          </div>
-        ) : null}
+            </div>
+            {this.state.slider ? (
+              <div className="slider">
+                <i
+                  className="fas fa-times"
+                  onClick={() =>
+                    this.setState(
+                      {
+                        slider: false,
+                      },
+                      () =>
+                        (document.getElementsByTagName(
+                          "body"
+                        )[0].style.overflow = "auto")
+                    )
+                  }
+                ></i>
+                <Slider ref={(slider) => (this.slider = slider)} {...settings}>
+                  {this.state.images.map((image, index) => {
+                    return (
+                      <div className="sliderImage" key={index}>
+                        <img src={image} alt="" />;
+                      </div>
+                    );
+                  })}
+                </Slider>
+              </div>
+            ) : null}
+          </>
+        )}
       </div>
     );
   }

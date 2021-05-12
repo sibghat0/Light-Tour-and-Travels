@@ -17,17 +17,20 @@ export default class Footer extends Component {
             </div>
             <div className="content">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Numquam eligendi, corrupti quas dicta dolorem maxime ad natus
-                molestiae autem, temporibus perspiciatis voluptatibus similique
-                molestias quam? Suscipit dolorum iure porro aut magnam, repellat
-                amet, quo esse consectetur hic ipsum enim ipsam voluptatum nulla
-                commodi numquam rerum. Impedit earum voluptatibus eaque quod
-                repudiandae molestiae officia incidunt amet facilis cumque
-                nobis, tempore dicta soluta qui dignissimos necessitatibus
-                perspiciatis quo! Ducimus nam earum beatae, impedit ex,
-                accusamus a ullam veniam aperiam, magnam ab expedita.
+                “Travel is the main thing you purchase that makes you more
+                extravagant”. We at “Light Tour and Travels” aims at providing
+                our clients with satisfying travel dreams and a hassle free
+                travel. Since our inception in 1995 “Light Tour and Travels” had
+                been catering to the needs of more than thousands of customers.
+                It is our duty in making utmost efforts to make the best deals
+                available to our customers. We are thereby committed to
+                providing a professional service to all our clients at a
+                national level. We are here to provide the best places in the
+                budget and packages you cannot deny for the wanderlust in you We
+                pride ourselves in being fast, efficient and cost effective
+                travel experience.
               </p>
+              <h3 style={{ marginTop: 20 }}>ADDING JOY TO YOUR EXPERIENCE.</h3>
             </div>
           </div>
           <div className="right">
